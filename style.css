@@ -1,0 +1,149 @@
+:root {
+  --primary-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --card-bg: rgba(255, 255, 255, 0.2);
+  --text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--primary-bg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.app-container {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  width: 350px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.search-box {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff9a9e;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Data Display */
+.weather-card h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+.temp {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.desc {
+  text-transform: capitalize;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.loading {
+  animation: pulse 1.5s infinite;
+}
+.error {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+/* Forecast Styles */
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
+}
+
+.forecast-item {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px 5px;
+  border-radius: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.forecast-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.forecast-date {
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  font-size: 0.9rem;
+}
+
+.forecast-temp {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Adjust main card slightly to make room */
+.app-container {
+  width: 400px; /* Widened slightly for the 5 items */
+}
+
+/* Unit Toggle Button */
+.unit-toggle {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.unit-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
