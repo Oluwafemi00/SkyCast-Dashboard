@@ -29,7 +29,7 @@ Building this project solidified several key technical concepts:
 2. **State Management in Vanilla JS:** Implementing the unit toggle required managing global state (`currentUnit` and `lastQuery`) to re-fetch and re-render data dynamically based on user interaction.
 3. **Data Transformation:** The OpenWeatherMap 5-day forecast returns data in 3-hour increments (40 data points). I utilized JavaScript array methods (`.filter()` and `.forEach()`) to isolate the specific timestamps needed for a clean daily view.
 
-## 🚀 Local Setup
+## Local Setup
 
 1. Clone the repository:
    \`\`\`bash
