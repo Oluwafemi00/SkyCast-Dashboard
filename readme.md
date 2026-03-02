@@ -28,16 +28,3 @@ Building this project solidified several key technical concepts:
 1. **Asynchronous Data Handling:** Managing the "Happy Path" vs. "Error Path" using `try...catch` blocks ensured the application never fails silently, improving the overall user experience.
 2. **State Management in Vanilla JS:** Implementing the unit toggle required managing global state (`currentUnit` and `lastQuery`) to re-fetch and re-render data dynamically based on user interaction.
 3. **Data Transformation:** The OpenWeatherMap 5-day forecast returns data in 3-hour increments (40 data points). I utilized JavaScript array methods (`.filter()` and `.forEach()`) to isolate the specific timestamps needed for a clean daily view.
-
-## Local Setup
-
-1. Clone the repository:
-   \`\`\`bash
-   git clone https://github.com/oluwafemi00.github.io/SkyCast-Dashboard.git
-   \`\`\`
-2. Navigate to the project directory:
-   \`\`\`bash
-   cd weather-dashboard
-   \`\`\`
-3. Open `index.html` in your browser or run it via a local server (e.g., VS Code Live Server).
-   _(Note: You will need to substitute the placeholder API key in `script.js` with your own OpenWeatherMap key for local testing)._
