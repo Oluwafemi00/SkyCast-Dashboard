@@ -2,7 +2,7 @@ const apiKey = "2cab751e458687f1635af427a067aa87";
 const searchBtn = document.getElementById("searchBtn");
 const displayArea = document.getElementById("displayArea");
 const forecastArea = document.getElementById("forecastArea");
-const unitToggleBtn = document.getElementById("unitToggle"); // New element
+const unitToggleBtn = document.getElementById("unitToggle");
 
 // --- NEW: GLOBAL STATE VARIABLES ---
 let currentUnit = "metric"; // Default to Celsius
