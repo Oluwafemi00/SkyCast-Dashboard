@@ -2,20 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>SkyCast Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCast — Weather Dashboard</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <div class="app-container">
-      <h1>SkyCast</h1>
-      <div class="search-box">
-        <input type="text" id="cityInput" placeholder="Enter city name..." />
-        <button id="searchBtn">Search</button>
+  <body class="sky-default">
+    <!-- ANIMATED BG LAYERS -->
+    <div class="bg-layer bg-base"></div>
+    <div class="bg-layer bg-glow"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- APP SHELL -->
+    <div class="shell">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="logo">
+          <span class="logo-icon">◎</span>
+          Sky<em>Cast</em>
+        </div>
+        <div class="topbar-right">
+          <button class="btn-unit" id="unitToggle">°C · °F</button>
+          <button class="btn-locate" id="locateBtn" title="Use my location">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="3" />
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+              <path d="M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            </svg>
+            Locate me
+          </button>
+        </div>
+      </header>
+
+      <!-- SEARCH BAR -->
+      <div class="search-wrap">
+        <div class="search-inner">
+          <svg
+            class="search-icon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Search city, country…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button class="btn-search" id="searchBtn">Search</button>
+        </div>
       </div>
-      <button id="unitToggle" class="unit-toggle">Switch to °F</button>
-      <div id="displayArea"></div>
-      <div id="forecastArea"></div>
+
+      <!-- MAIN CONTENT -->
+      <main class="main" id="mainArea">
+        <!-- Populated by JS -->
+        <div class="hero-placeholder">
+          <p class="placeholder-text">Search a city or allow location access</p>
+        </div>
+      </main>
     </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
     <script src="script.js"></script>
   </body>
 </html>
